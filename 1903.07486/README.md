@@ -2,7 +2,53 @@ Dissecting the NVIDIA Turing T4 GPU via Microbenchmarking
 
 
 
-1903.07486
+Contents
+
+1 Low-level details make a difference 5
+
+2 How Turing encodes instructions 9
+
+2.1 Control information . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+2.2 Processing Blocks and Schedulers . . . . . . . . . . . . . . . . . . 12
+
+2.3 Instruction word format . . . . . . . . . . . . . . . . . . . . . . . 13
+
+3 Memory hierarchy 15
+
+3.1 L1 data cache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+3.2 Unified L2 cache . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+3.3 Instruction cache hierarchy . . . . . . . . . . . . . . . . . . . . . 25
+
+3.4 Constant memory hierarchy . . . . . . . . . . . . . . . . . . . . . 28
+
+3.5 Registers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+3.6 Shared memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+
+3.7 Global memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+3.8 TLBs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+4 Instruction latency and throughput 39
+
+4.1 Native instructions . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+4.2 Atomic operations . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+4.3 New Tensor Core instructions . . . . . . . . . . . . . . . . . . . . 43
+
+4.4 Arithmetic performance . . . . . . . . . . . . . . . . . . . . . . . 44
+
+4.5 Performance throttling . . . . . . . . . . . . . . . . . . . . . . . . 46
+
+5 Conclusions 51
+
+Bibliography 61
+
+Contents 63
 
 
 
