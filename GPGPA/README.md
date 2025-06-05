@@ -11,3 +11,7 @@ https://zhuanlan.zhihu.com/p/510756136
 https://zhuanlan.zhihu.com/p/510961793
 
 https://zhuanlan.zhihu.com/p/514662512
+
+通用图形处理器设计GPGPU编程模型与架构原理
+
+https://pdfs.top/book/44fa1bd896904c29803e539795d81cb0
